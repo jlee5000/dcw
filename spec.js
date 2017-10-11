@@ -34,7 +34,7 @@ describe('Document Create Wrapper', function() {
         expect(div.outerHTML).to.be.equal('<div class="foo" id="bar">text</div>');
     });
 
-    it('should should return an <div class="foo" id="bar">text</div>', function() {
+    it('should should return an <div class="bar" id="foo">text</div>', function() {
         div = dcm('div',[{"class":"bar"},{"id":"foo"}], 'text');
         expect(div.outerHTML).to.be.equal('<div class="bar" id="foo">text</div>');
     });
