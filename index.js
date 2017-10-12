@@ -1,9 +1,9 @@
 /**
  * documentCreateWrapper
  *
- * @param string - type the element type, 'div', 'p', 'img' etc.
- * @param object - attributes array of objects. [{'key':'value'}]
- * @param object - append append any value. usually document.createTextNode() for text.
+ * @param type       - string, the element type, 'div', 'p', 'img' etc.
+ * @param attributes - object, array of objects. [{'key':'value'}]
+ * @param append     - object, append any value. usually document.createTextNode() for text.
  *        You can nest this function over and over until you have the desired effect you want.
  *
  * @returns {object}
@@ -33,7 +33,7 @@ module.exports = function(type, attributes, append) {
         }
     }
 
-    if(append !== null && append !== undefined && Array.isArray(append)===true) {
+    if(append !== null && append !== undefined && Array.isArray(append) === true) {
         for(let j = 0; j<append.length; j++) {
             if(typeof append[j] === 'string') {
                 doc.appendChild(document.createTextNode(append[j]));
