@@ -10,7 +10,7 @@
  */
 module.exports = function(type, attributes, append) {
 
-    if (arguments.length===0) {
+    if (arguments.length === 0) {
         throw 'no arguments present';
     }
 
@@ -34,7 +34,7 @@ module.exports = function(type, attributes, append) {
     }
 
     if(append !== null && append !== undefined && Array.isArray(append)===true) {
-        for(let j=0; j<append.length; j++) {
+        for(let j = 0; j<append.length; j++) {
             if(typeof append[j] === 'string') {
                 doc.appendChild(document.createTextNode(append[j]));
             } else {
